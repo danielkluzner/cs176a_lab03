@@ -7,8 +7,8 @@
 
 int main(int argc, char * argv[]) {
 
-  if(argc != 3){
-    printf("Enter IP address and Port #\n");
+  if(argc != 2){
+    printf("Enter IP address!\n");
     return 0;
   }  
 
@@ -20,13 +20,12 @@ int main(int argc, char * argv[]) {
     server_ip[i] = *(start + i);
     if(*(start + i) == '\0') break;
   }
-  int port = atoi(argv[2]);
     
   int socket_id = socket(AF_INET, SOCK_DGRAM, 0);
   
   server_address.sin_family = AF_INET;
   server_address.sin_addr.s_addr = inet_addr( server_ip );
-  server_address.sin_port = htons(port);
+  server_address.sin_port = htons(12000);
   
   sendto( socket_id, input, strlen(input), 0,
 	  (struct sockaddr *) &server_address, sizeof(struct sockaddr_in) );
