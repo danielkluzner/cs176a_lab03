@@ -1,10 +1,11 @@
 # Lab03
 
-Alex Soto\n
-Daniel Kluzner\n
+Alex Soto, Daniel Kluzner
+
 CS 176A, Fall 2019
 
 Programming Assignment for Homework 3
+
 
 Files
 -------------
