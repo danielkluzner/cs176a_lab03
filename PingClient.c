@@ -9,7 +9,7 @@ int main(int argc, char * argv[]) {
 
   if(argc != 3){
     printf("Enter IP address and Port #\n");
-    return 0;
+    exit(1);
   }  
 
   struct sockaddr_in server_address, return_address;
@@ -28,6 +28,7 @@ int main(int argc, char * argv[]) {
   server_address.sin_addr.s_addr = inet_addr( server_ip );
   server_address.sin_port = htons(port);
 
+  char input[150] = "hello";
   sendto( socket_id, input, strlen(input), 0,
 	  (struct sockaddr *) &server_address, sizeof(struct sockaddr_in) );
 
