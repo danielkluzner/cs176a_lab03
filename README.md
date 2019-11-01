@@ -9,11 +9,19 @@ Programming Assignment for Homework 3
 
 Files
 -------------
-File list
+
+PingClient.c
+
+UPDPingerServer.py
+
+makefile
 
 
 How it works
 -------------
 
-UDP:
-	Add stuff here
+Type the following into the command line after executing make:
+
+./PingClient <IP address> <port #>
+
+And watch the output appear. It is assumed that the server has already been started, as specified in the lab specification.
